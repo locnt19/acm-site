@@ -1,0 +1,71 @@
+header
+	z-index: 100
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	color: #fff
+	&.on-scroll
+		transition: all .3s ease-in-out
+		color: $color-title-3
+		background: #fff
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3)
+.header-nav
+	text-transform: uppercase
+	line-height: 1.5
+	margin-left: auto
+	li
+		display: inline-block
+		margin-left: 20px
+	a
+		&.active
+			font-weight: 900
+.hamburger
+	font-size: 28px
+	height: 35px
+	width: 35px
+	border: 1px solid $color-text
+	border-radius: 4px
+	position: relative
+	margin-left: auto
+	cursor: pointer
+	color: $color-text
+	display: none
+	&:before
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		// font-icon
+		content: '\e871'
+		font-family: 'Linearicons-Free'
+		speak: none
+		font-style: normal
+		font-weight: normal
+		font-variant: normal
+		text-transform: none
+		line-height: 1
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+@media (max-width: 767.97px)
+	header
+		background: #fff
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
+	.logo
+		margin-left: 15px
+		img
+			width: 128px
+	.hamburger
+		display: block
+	.header-nav
+		text-align: right
+		padding-right: 15px
+		flex: 0 0 100%
+		max-width: 100%
+		background: #fff
+		overflow: auto
+		color: $color-title-1
+		display: none
+		li
+			display: block
+			margin: 30px 0

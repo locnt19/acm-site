@@ -1,0 +1,87 @@
+.header-banner
+	line-height: 1.5
+	height: 660px
+	.figure
+		margin-top: 30px
+		.box-img
+			text-align: right
+	.banner-right
+		z-index: 1
+		&:before
+			content: ''
+			width: 2000px
+			height: 650px
+			background-image: url(../img/header-banner-bg-2.png)
+			background-size: cover
+			position: absolute
+			left: -50%
+			top: 0
+			z-index: -1
+	.title
+		margin: 100px 0 30px 15px
+	.sub-title
+		margin-top: 10px
+		margin-left: 50px
+		color: $color-sub-title
+	.swiper-slide 
+		.box-img
+			position: relative
+			width: 300px
+			height: 250px
+			overflow: hidden
+			margin-top: 10px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+			&:before
+				content: ''
+				width: 300px
+				height: 250px
+				background-image: url(../img/border-item.png)
+				background-size: contain
+				position: absolute
+				left: 0
+				top: 0
+	.pagination
+		span
+			border-radius: 0
+			width: 30px
+			height: 5px
+			margin: 0 5px
+			outline: none
+			&:first-child
+				margin-left: 0
+			&.swiper-pagination-bullet-active
+				background: $color-title-1
+	.swiper-slide p,
+	.pagination,
+	.see-more
+		margin-left: 50px
+	.see-more
+		margin-top: 15px
+@media (max-width: 991.97px)
+	.header-banner
+		.figure
+			margin-top: 100px
+			.box-img
+				img
+					width: 100%
+@media (max-width: 767.97px)
+	.header-banner
+		height: auto
+		.title
+			margin-top: 0
+			margin-bottom: 15px
+		.figure
+			margin-top: 30px
+			.box-img
+				text-align: center
+			img
+				height: 450px
+		.banner-right
+			order: -1
+			&:before
+				width: 1000px
+				left: -35%
+				height: 450px
