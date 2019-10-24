@@ -1,0 +1,62 @@
+.ho-so
+	padding: 60px 0
+.ho-so-inner
+	display: grid
+	grid-template-columns: auto 1fr
+	grid-column-gap: 50px
+	width: 85%
+	margin: 0 auto
+	padding: 50px
+	border: 15px solid $color-text
+	border-radius: 70px
+	position: relative
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		width: 128px
+		height: 114px
+		background-size: cover
+		z-index: 1
+	&:before
+		background-image: url(../img/quote-mark-top.png)
+		right: -15px
+		top: -15px
+	&:after
+		background-image: url(../img/quote-mark-bot.png)
+		left: -15px
+		bottom: -15px
+	.left
+		position: relative
+		font-weight: 900
+		text-transform: uppercase
+		z-index: 2
+		p
+			line-height: 1
+			&:nth-child(1)
+				font-size: 80px
+			&:nth-child(2)
+				text-align: right
+				font-size: 50px
+				position: absolute
+				top: 40px
+				right: 0
+			&:nth-child(3)
+				font-size: 90px
+			&:nth-child(4)
+				text-align: right
+				font-size: 50px
+			&:nth-child(5)
+				text-align: right
+				font-size: 30px
+	.right
+		p
+			padding-left: 15px
+			position: relative
+			line-height: 1.5
+			margin-bottom: 10px
+			&:before
+				content: '-'
+				position: absolute
+				left: 0
+				top: -1px

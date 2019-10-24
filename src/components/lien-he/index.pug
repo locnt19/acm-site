@@ -1,0 +1,21 @@
+section.lien-he
+	.container
+		.row
+			.col-md-4
+				h2.title liên hệ với chúng tôi
+				form(method="post").contact-form
+					.form-item
+						input(type="text" id="name" placeholder="Nhập họ và tên")
+					.form-item
+						input(type="text" id="email" placeholder="exemple@email.com")
+					.form-item
+						input(type="text" id="title" placeholder="Nhập tiêu đề")
+					.form-item
+						input(type="text" id="phone" placeholder="Nhập Số điện thoại")
+					.form-item
+						textarea(id="content" placeholder="Nhập nội dung...")
+					input(type="submit", value="GỬI").contact-send
+			.col-md-8.banner-right
+				.figure
+					.box-img
+						img(src='img/header-banner.png', alt='header-banner')

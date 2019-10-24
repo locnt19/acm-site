@@ -2,7 +2,6 @@ $(document).ready(function () {
 	// back-2-top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
-			console.log($(this).scrollTop());
 			$('header').addClass('on-scroll');
 		} else {
 			$('header').removeClass('on-scroll');
@@ -43,72 +42,33 @@ $(document).ready(function () {
 		},
 	});
 
-	var hoatDongMirai = new Swiper('.hoat-dong-mirai .swiper-container', {
+	var camNhanHocVien = new Swiper('.cam-nhan .swiper-container', {
 		slidesPerView: 2,
 		spaceBetween: 30,
 		loop: true,
-		centeredSlides: true,
 		autoplay: {
 			delay: 2000,
 			disableOnInteraction: false,
 		},
-		lazy: true,
-		speed: 1500,
+		speed: 1900,
 		breakpoints: {
 			575.97: {
 				slidesPerView: 1
 			}
 		},
 		pagination: {
-			el: '.hoat-dong-mirai .pagination',
-			clickable: true
-		},
-	});
-	var camNhanHocVien = new Swiper('.cam-nhan-hoc-vien .swiper-container', {
-		slidesPerView: 2,
-		spaceBetween: 30,
-		loop: true,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-		speed: 3000,
-		breakpoints: {
-			575.97: {
-				slidesPerView: 1
-			}
-		},
-		pagination: {
-			el: '.cam-nhan-hoc-vien .pagination',
+			el: '.cam-nhan .pagination',
 			clickable: true,
 		},
 	});
 
-	// Resposive
-	const windowSize = $(window).width();
-	if (windowSize <= 768) {
-		$('.header-bottom .row .col-12').prepend($('.header-right'))
-		$('.header-bottom-inner').append($('.search-box'))
-		$('.header-bottom-inner').append($('.header-left'))
-	}
-	$('.toggle-menu').on('click', function () {
-		$(this).toggleClass('open')
-		$('.header-bottom-inner').slideToggle()
+	// Event hover silde CamNhanHocVien
+	$('.cam-nhan figcaption').mouseover(function () {
+		camNhanHocVien.autoplay.stop();
 	});
-
-
-	// Tabs viec lam
-	$('.viec-lam-title li').on('click', function () {
-		$('.viec-lam-title li').removeClass('active')
-		$(this).addClass('active')
-		var currentTabsOpen = $(this).attr('tabs');
-		$('.tabs-content-wrap').each(function () {
-			$(this).removeClass('active')
-			if ($(this).attr('tabs') === currentTabsOpen) {
-				$(this).addClass('active')
-			}
-		})
-	})
+	$('.cam-nhan figcaption').mouseleave(function () {
+		camNhanHocVien.autoplay.start();
+	});
 
 
 	// stuff-hoi-dap
@@ -121,14 +81,53 @@ $(document).ready(function () {
 		$(this).siblings('.item-content').slideToggle();
 	})
 
-	// tuyen-dung-popup
-	$('.tuyen-dung .btn-so-yeu-li-lich').click(function () {
-		$('.tuyen-dung-popup').addClass('active')
-		$('.tuyen-dung-popup-background').addClass('active')
-	})
-	// close popup
-	$('.tuyen-dung-popup .mdi-close').click(function () {
-		$('.tuyen-dung-popup').removeClass('active')
-		$('.tuyen-dung-popup-background').removeClass('active')
-	})
+	var tinTucIndex = new Swiper('.tin-tuc .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1900,
+		breakpoints: {
+			575.97: {
+				slidesPerView: 1
+			}
+		},
+		pagination: {
+			el: '.tin-tuc .pagination',
+			clickable: true,
+		},
+	});
+	var lienKetIndex = new Swiper('.lien-ket .swiper-container', {
+		slidesPerView: 5,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1900,
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			575.97: {
+				slidesPerView: 1
+			}
+		},
+		pagination: {
+			el: '.lien-ket .pagination',
+			clickable: true,
+		},
+	});
+	var boSuuTap = new Swiper('.bo-suu-tap .swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 45,
+		speed: 1900,
+		breakpoints: {
+			575.97: {
+				slidesPerView: 1
+			}
+		},
+		pagination: {
+			el: '.bo-suu-tap .pagination',
+			clickable: true,
+		},
+	});
+
 });

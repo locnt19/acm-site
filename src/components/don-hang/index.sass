@@ -1,0 +1,85 @@
+.don-hang
+	margin-top: 30px
+	.table-top,
+	.table-bottom
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 10px
+		padding: 0
+		font-weight: 300
+		font-size: 13px
+	.table-bottom
+		margin-top: 10px
+	.search-box
+		input
+			width: 200px
+			font-family: 'Roboto', sans-serif
+			margin-left: 5px
+			padding: 4px 15px
+			border-radius: 4px
+			border: 1px solid $color-2
+			&::placeholder
+				font-style: italic
+	.pagination
+		font-size: 15px
+		a
+			margin: 0 5px
+			padding-bottom: 2px
+			&:hover,
+			&.current
+				color: $color-title-3
+				box-shadow: 0 1px 0 0 $color-title-1
+	.display-mode
+		select
+			width: 40px
+			border-radius: 4px
+			border: none
+			color: $color-text
+			background: $color-2
+			padding: 2px
+			margin: 0 5px
+	.grid-container
+		width: 100%
+	.grid-header,
+	.grid-item
+		display: grid
+		grid-template-columns: 40% 1fr 1fr 0.5fr 1fr 1fr
+		line-height: 1.5
+		padding: 8px 15px
+		text-transform: uppercase
+		div:not(:first-child)
+			text-align: center
+	.grid-header
+		color: $color-title-1
+		font-weight: 700
+		background: $color-title-4
+	.grid-item
+		font-size: 14px
+		border-bottom: 1px solid $color-2
+		&:hover
+			background: $color-2
+			font-weight: 700
+		div
+			span
+				font-weight: 500
+				padding: 4px 7px
+				border-radius: 4px
+			&:nth-child(3)
+				span
+					color: #fff
+					background: $color-money
+			&:nth-child(4)
+				span
+					color: #fff
+					background: $color-low
+					&.n1
+						background: $color-severe
+					&.n2
+						background: $color-warning
+					&.n3
+						color: #006600
+						background: $color-elevate
+					&.n4
+						background: $color-guard
