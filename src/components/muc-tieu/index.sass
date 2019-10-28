@@ -1,12 +1,14 @@
 .muc-tieu
-	padding: 60px 0
+	padding: 60px 0 150px
+	overflow: hidden
+	position: relative
 	.content
 		text-align: right
 		p
+			font-size: 28px
 			line-height: 2
 			font-weight: 300
 			font-style: italic
-			font-size: 28px
 	.line
 		width: 70%
 		margin: 30px auto 0
@@ -14,15 +16,34 @@
 		line-height: 1.5
 		font-size: 100px
 		color: $color-title-3
-	.bg-muc-tieu
+	&:before
+		z-index: -1
+		content: ''
+		position: absolute
+		width: 1129px
+		height: 800px
+		background-image: url(../img/bg-banner-4.png)
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		left: 50%
+		top: 0
+@media (max-width: 1199.97px)
+	.muc-tieu
+		.title
+			font-size: 80px
+		.content
+			p
+				color: $color-title-1
+		.line
+			background: $color-title-3
+@media (max-width: 767.97px)
+	.muc-tieu
+		padding: 30px 0
+		.title
+			font-size: 40px
+		.content
+			p
+				font-size: 18px
+				line-height: 2
 		&:before
-			z-index: -1
-			content: ''
-			position: absolute
-			width: 1029px
-			background-size: cover
-			height: 800px
-			background-image: url(../img/bg-banner-4.png)
-			left: 0
-			top: 50%
-			transform: translateY(-50%)
+			left: -50%

@@ -1,5 +1,5 @@
 .ho-so
-	padding: 60px 0
+	padding: 60px 15px
 .ho-so-inner
 	display: grid
 	grid-template-columns: auto 1fr
@@ -50,13 +50,46 @@
 				text-align: right
 				font-size: 30px
 	.right
+		z-index: 2
 		p
 			padding-left: 15px
 			position: relative
 			line-height: 1.5
-			margin-bottom: 10px
+			&:not(:last-child)
+				margin-bottom: 10px
 			&:before
 				content: '-'
 				position: absolute
 				left: 0
 				top: -1px
+@media (max-width: 991.97px)
+	.ho-so-inner
+		padding: 30px
+		grid-gap: 30px
+		width: 90%
+@media (max-width: 767.97px)
+	.ho-so-inner
+		grid-template-columns: 1fr
+		grid-gap: 15px
+		width: 100%
+		border-style: inset
+		padding: 30px 15px
+		&:before,
+		&:after
+			background-size: 60% 60%
+			background-repeat: no-repeat
+		&:before
+			background-position: right top
+		&:after
+			background-position: left bottom
+		.left
+			text-align: center
+			p
+				display: inline-block
+				font-size: 36px !important
+				&:nth-child(2)
+					position: static
+		.right
+			p
+				&:not(:last-child)
+					margin-bottom: 0

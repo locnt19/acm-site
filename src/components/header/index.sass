@@ -47,10 +47,13 @@ header
 		line-height: 1
 		-webkit-font-smoothing: antialiased
 		-moz-osx-font-smoothing: grayscale
+.nav-mobile
+	display: none
 @media (max-width: 767.97px)
 	header
-		background: #fff
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
+		.top-header
+			background: #fff
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
 	.logo
 		margin-left: 15px
 		img
@@ -58,14 +61,29 @@ header
 	.hamburger
 		display: block
 	.header-nav
-		text-align: right
-		padding-right: 15px
-		flex: 0 0 100%
-		max-width: 100%
-		background: #fff
-		overflow: auto
-		color: $color-title-1
 		display: none
+	.nav-mobile
+		display: block
+		z-index: -1
+		color: #fff
+		width: 320px
+		line-height: 1.5
+		text-align: right
+		padding: 0 15px 15px
+		position: absolute
+		right: 0
+		text-transform: uppercase
+		transform: translateX(330px)
+		transition: transform .3s ease-in-out
+		box-shadow: 0 0 3px 0 rgba(#000, .5)
+		background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%)
+		&.active
+			transform: translateX(0)
 		li
 			display: block
-			margin: 30px 0
+			padding: 15px 0
+			&:not(:last-child)
+				border-bottom: 1px solid rgba(#fff, .5)
+		a
+			&.active
+				font-weight: 900

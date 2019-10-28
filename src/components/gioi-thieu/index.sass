@@ -1,6 +1,6 @@
-.gioi-thieu
+.gioi-thieu-wrap
 	position: relative
-	margin-top: 60px
+	margin: 60px 0 30px
 	padding: 50px
 	height: 500px
 	.gioi-thieu-inner
@@ -10,20 +10,23 @@
 	&:before,
 	&:after
 		content: ''
-		position: absolute
-		width: 1140px
-		background-size: cover
-	&:before
-		height: 500px
-		background-image: url(../img/bg-banner-3.png)
 		z-index: 1
+		width: 100%
+		position: absolute
+		background-repeat: no-repeat
+	&:before
+		height: 100%
+		background-image: url(../img/bg-banner-3-right.png), url(../img/bg-banner-3-left.png)
+		background-position: right top, left bottom
+		background-size: 600px 448px, 375px 404px
 		left: 0
 		top: 0
 	&:after
 		height: 30px
 		background-image: url(../img/bg-banner-3-shadow.png)
+		background-size: 100% 30px
 		left: 0
-		bottom: -30px
+		bottom: -29px
 	.title
 		font-size: 100px
 		font-weight: 900
@@ -34,10 +37,13 @@
 		color: #fff
 		width: 50%
 		position: absolute
-		z-index: 1
+		z-index: 2
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
+		line-height: 1.5
+		font-size: 28px
+		font-weight: 100
 		&:before,
 		&:after
 			content: ''
@@ -53,7 +59,37 @@
 			bottom: -15px
 			right: 0
 		p
-			line-height: 1.5
-			font-size: 28px
-			font-weight: 100
 			margin-left: 50px
+@media (max-width: 991.97px)
+	.gioi-thieu-wrap
+		padding: 35px
+		height: 350px
+		&:before
+			background-size: 65%, 50%
+		.title
+			font-size: 80px
+		.content
+			width: 80%
+			font-size: 24px
+@media (max-width: 767.97px)
+	.gioi-thieu-wrap
+		padding: 30px
+		&:after
+			background-size: 100% 20px
+		.title
+			font-size: 50px
+		.content
+			font-size: 20px
+			&:before
+				width: 150px
+			&:after
+				width: 200px
+@media (max-width: 575.97px)
+	.gioi-thieu
+		padding: 0
+	.gioi-thieu-wrap
+		margin-top: 30px
+		padding: 15px
+		.content
+			p
+				margin-left: 30px

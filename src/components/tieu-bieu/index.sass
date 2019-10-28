@@ -1,9 +1,9 @@
 .tieu-bieu
-	margin-top: 60px
+	padding-top: 60px
 	.grid-container
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-		grid-column-gap: 15px
+		grid-gap: 15px
 	.sub-title
 		color: $color-title-2
 		margin-top: 10px
@@ -12,3 +12,15 @@
 		text-align: center
 		p
 			font-weight: 300
+	.box-img
+		img
+			max-width: 100%
+@media (max-width: 991.97px)
+	.tieu-bieu
+		padding-top: 0
+		.grid-container
+			grid-template-columns: 1fr 1fr 1fr
+@media (max-width: 767.97px)
+	.tieu-bieu
+		.grid-container
+			grid-template-columns: 1fr

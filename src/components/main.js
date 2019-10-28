@@ -23,8 +23,11 @@ $(document).ready(function () {
 	})
 
 	// hamburger click
+	// $('header .hamburger').on('click', function () {
+	// 	$(this).siblings('.header-nav').slideToggle();
+	// })
 	$('header .hamburger').on('click', function () {
-		$(this).siblings('.header-nav').slideToggle();
+		$('.nav-mobile').toggleClass('active');
 	})
 
 	// Slider
@@ -87,8 +90,12 @@ $(document).ready(function () {
 		loop: true,
 		speed: 1900,
 		breakpoints: {
+			767.97: {
+				slidesPerView: 2
+			},
 			575.97: {
-				slidesPerView: 1
+				slidesPerView: 2,
+				spaceBetween: 15
 			}
 		},
 		pagination: {
@@ -106,7 +113,14 @@ $(document).ready(function () {
 			disableOnInteraction: false,
 		},
 		breakpoints: {
-			575.97: {
+			991.97: {
+				slidesPerView: 4
+			},
+			767.97: {
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			320: {
 				slidesPerView: 1
 			}
 		},
@@ -120,8 +134,12 @@ $(document).ready(function () {
 		spaceBetween: 45,
 		speed: 1900,
 		breakpoints: {
+			991.97: {
+				slidesPerView: 2
+			},
 			575.97: {
-				slidesPerView: 1
+				slidesPerView: 2,
+				spaceBetween: 30
 			}
 		},
 		pagination: {

@@ -5,8 +5,9 @@
 		margin: 0 auto
 		position: relative
 	.swiper-container
-		padding-top: 30px
-		padding-right: 30px
+		padding-top: 20px
+		padding-right: 20px
+		padding-left: 10px
 	.text-center
 		margin-top: 15px
 		span
@@ -53,7 +54,7 @@
 		display: flex
 		align-items: center
 		position: absolute
-		right: calc(100%-15px)
+		right: calc(100%-30px)
 		top: 0
 		transform: rotate(-90deg) translateX(-50%)
 		.pagination
@@ -87,8 +88,33 @@
 			text-transform: uppercase
 			margin-left: 10px
 	.line
-		width: 100px
+		background: $color-text
+		width: 80px
 		height: 1px
 		margin: 0
 		margin-left: 15px
 		transform: translateY(-3px)
+@media (max-width: 991.97px)
+	.bo-suu-tap
+		.bo-suu-tap-inner
+			width: 90%
+		.pagination-wrap
+			right: 80%
+@media (max-width: 767.97px)
+	.bo-suu-tap
+		.bo-suu-tap-inner
+			width: 100%
+		.swiper-container
+			padding-left: 0
+		.pagination-wrap
+			transform: none
+			position: static
+			margin-top: 30px
+			justify-content: center
+		.line
+			width: 100%
+		.box-img
+			height: 140px
+		.text-center
+			span
+				box-shadow: none

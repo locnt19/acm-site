@@ -10,6 +10,7 @@
 		padding: 0
 		font-weight: 300
 		font-size: 13px
+		flex-wrap: wrap
 	.table-bottom
 		margin-top: 10px
 	.search-box
@@ -40,17 +41,57 @@
 			background: $color-2
 			padding: 2px
 			margin: 0 5px
-	.grid-container
+	.table-wrap
 		width: 100%
-	.grid-header,
-	.grid-item
-		display: grid
-		grid-template-columns: 40% 1fr 1fr 0.5fr 1fr 1fr
-		line-height: 1.5
-		padding: 8px 15px
-		text-transform: uppercase
-		div:not(:first-child)
+		overflow-x: auto
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+	thead
+		background: $color-title-4
+		color: $color-title-1
+		font-weight: 900
+	tbody
+		font-size: 14px
+		tr
+			border-bottom: 1px solid $color-2
+			&:hover
+				background: $color-2
+	tr
+		th, td
 			text-align: center
+			padding: 8px 15px
+			text-transform: uppercase
+			line-height: 1.5
+			&:first-child
+				text-align: left
+				min-width: 400px
+	td
+		span
+			font-weight: 500
+			padding: 4px 7px
+			white-space: nowrap
+			border-radius: 4px
+		&:nth-child(3)
+			span
+				color: #fff
+				background: $color-money
+		&:nth-child(4)
+			span
+				color: #fff
+				background: $color-low
+				&.n1
+					background: $color-severe
+				&.n2
+					background: $color-warning
+				&.n3
+					color: #006600
+					background: $color-elevate
+				&.n4
+					background: $color-guard
+		&:nth-child(5)
+			font-weight: 500
 	.grid-header
 		color: $color-title-1
 		font-weight: 700
@@ -83,3 +124,19 @@
 						background: $color-elevate
 					&.n4
 						background: $color-guard
+@media (max-width: 991.97px)
+	.don-hang
+		tr
+			th, td
+				&:first-child
+					min-width: 300px
+@media (max-width: 575.97px)
+	.don-hang
+		.title
+			margin-bottom: 15px
+		.table-top,
+		.table-bottom
+			justify-content: center
+		.search-box,
+		.display-mode
+			margin-top: 15px

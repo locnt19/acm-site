@@ -1,5 +1,7 @@
 .lien-he
 	padding: 60px 0
+	position: relative
+	overflow: hidden
 	.title
 		color: $color-title-2
 		margin-bottom: 30px
@@ -9,17 +11,34 @@
 		background: $color-title-1
 		color: #fff
 		font-weight: 700
-	.banner-right
-		z-index: 1
+		position: relative
+		transition-duration: 0.4s
+		cursor: pointer
+		&:hover
+			background-color: #003FAD
+			box-shadow: inset 10px 0px 0px 0 #D3398D
+	.box-img
 		text-align: center
+		img
+			max-width: 100%
+	&:before
+		content: ''
+		width: 783px
+		height: 623px
+		background-image: url(../img/bg-banner-5.png)
+		background-size: cover
+		position: absolute
+		left: 40%
+		top: 50%
+		transform: translateY(-50%)
+		z-index: -1
+@media (max-width: 767.97px)
+	.lien-he
+		padding: 100px 0
 		&:before
-			content: ''
-			width: 783px
-			height: 623px
-			background-image: url(../img/bg-banner-5.png)
-			background-size: cover
-			position: absolute
-			left: 15px
-			top: 50%
-			transform: translateY(-50%)
-			z-index: -1
+			left: 0
+		.title
+			color: $color-sub-title
+			margin-bottom: 15px
+		.box-img
+			display: none
