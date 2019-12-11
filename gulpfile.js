@@ -1,7 +1,6 @@
 const del = require('del')
 gulp = require('gulp')
 pug = require('gulp-pug')
-Fiber = require('fibers')
 sass = require('gulp-sass')
 cssnano = require('cssnano')
 babel = require('gulp-babel')
@@ -18,7 +17,7 @@ sassUnicode = require('gulp-sass-unicode')
 cssDeclarationSorter = require('css-declaration-sorter')
 browserSync = require('browser-sync').create()
 readFileSync = require('graceful-fs').readFileSync
-sass.compiler = require('dart-sass');
+sass.compiler = require('node-sass');
 
 
 // Task clean
@@ -114,9 +113,7 @@ gulp.task('css', function () {
 			allowEmpty: true
 		})
 		.pipe(srcmap.init())
-		.pipe(sass.sync({
-			fiber: Fiber
-		}).on('error', sass.logError))
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(sassUnicode())
 		.pipe(postcss([
 			prefixer({

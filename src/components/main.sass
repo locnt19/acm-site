@@ -23,7 +23,8 @@ $color-money: #2B76AE
 	background: $color-title-1
 
 body
-	font-family: 'Roboto', sans-serif
+	font-family: 'Rounded Mplus 1c', sans-serif
+	letter-spacing: 1px
 	color: $color-text
 	font-weight: 400
 	font-size: 16px
@@ -62,31 +63,6 @@ li
 		-webkit-font-smoothing: antialiased
 		-moz-osx-font-smoothing: grayscale
 		transform: translateY(10%)
-.posted
-	margin-top: 7px
-	padding-left: 15px
-	font-size: 12px
-	position: relative
-	&:before
-		content: '\e863'
-		font-family: 'Linearicons-Free'
-		speak: none
-		font-style: normal
-		font-weight: normal
-		font-variant: normal
-		text-transform: none
-		line-height: 1
-		-webkit-font-smoothing: antialiased
-		-moz-osx-font-smoothing: grayscale
-		-moz-osx-font-smoothing: grayscale
-		position: absolute
-		top: 2px
-		left: 0
-.line
-	background: $color-1
-	margin: 10px 0
-	width: 100%
-	height: 2px
 .form-item
 	width: 100%
 	margin-bottom: 10px
@@ -99,7 +75,7 @@ li
 		background: rgba(#fff, .5)
 		border: 1px solid $color-title-3
 		border-radius: 4px
-		font-family: 'Roboto', sans-serif
+		font-family: 'Rounded Mplus 1c', sans-serif
 		font-weight: 700
 		color: $color-title-1
 		&::placeholder
@@ -127,21 +103,30 @@ li
 
 
 @import "stylesheet/_mixins.sass"
-@import "header/index.sass"
-@import "footer/index.sass"
+// @import "header/index.sass"
+// @import "footer/index.sass"
+// @import "footer/index.sass"
 @import "stuff/index.sass"
 @import "back-2-top/index.sass"
 
 
-// home page
-@import "header-banner/index.sass"
-@import "don-hang/index"
-@import "gioi-thieu/index"
-@import "tieu-bieu/index"
-@import "muc-tieu/index"
-@import "ho-so/index"
-@import "cam-nhan/index"
-@import "tin-tuc/index"
-@import "lien-ket/index"
-@import "bo-suu-tap/index"
-@import "lien-he/index"
+// // home page
+// @import "header-banner/index.sass"
+// @import "don-hang/index"
+// @import "gioi-thieu/index"
+// @import "tieu-bieu/index"
+// @import "muc-tieu/index"
+// @import "ho-so/index"
+// @import "cam-nhan/index"
+// @import "tin-tuc/index"
+// @import "lien-ket/index"
+// @import "bo-suu-tap/index"
+// @import "lien-he/index"
+
+// v2
+@import v2-header/index
+@import v2-footer/index
+@import v2-banner/index
+@import v2-main/index
+@import v2-the-manh/index
+@import v2-lien-he/index

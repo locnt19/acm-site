@@ -11,12 +11,12 @@ html(lang="en")
 		title #{title}
 	body
 		block header
-			include ../components/header/index.pug
+			include ../components/v2-header/index.pug
 		main
 			block main
 		include ../components/back-2-top/index
-		include ../components/stuff/index
+		//- include ../components/stuff/index
 		block footer
-			include ../components/footer/index.pug
+			include ../components/v2-footer/index.pug
 		script(src="./js/global.min.js")
 		script(src="./js/main.min.js")
