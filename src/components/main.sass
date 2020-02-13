@@ -131,7 +131,7 @@ li
 @import "footer/index.sass"
 @import "stuff/index.sass"
 @import "back-2-top/index.sass"
-
+@import "breadcrumb/index.sass"
 
 // home page
 @import "header-banner/index.sass"
@@ -145,3 +145,154 @@ li
 @import "lien-ket/index"
 @import "bo-suu-tap/index"
 @import "lien-he/index"
+
+.page-banner
+	height: 350px
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+// page-don-hang
+.page-don-hang
+	.line
+		margin: 16px 0
+	table
+		margin: 32px 0
+	tr
+		th, td
+			text-align: left
+			&:first-child
+				font-weight: 700
+				min-width: 140px
+				@media screen and ( min-width: 576px )
+					min-width: 270px
+	.btn
+		margin-bottom: 48px
+		display: inline-block 
+		padding: 12px 20px
+		color: white
+		vertical-align: middle
+		text-decoration: none
+		transition: all .5s
+		background-color: #3498db
+		position: relative
+		&::before
+			content: ''
+			width: 100%
+			height: 8px
+			position: absolute
+			transition: all .5s
+			left: 4px
+			bottom: -8px
+			transform: skewX(45deg)
+			background-color: darken(#3498db, 20%)
+		&::after
+			content: ''
+			width: 8px
+			height: 100%
+			position: absolute
+			transition: all .5s
+			bottom: -4px
+			right: -8px
+			transform: skewY(45deg)
+			background-color: darken(#3498db, 30%)
+.viec-lam-mirai
+	line-height: 1.5
+	margin-bottom: 15px
+	.sub-title
+		line-height: 1
+		margin-bottom: 10px
+	li
+		list-style: none
+		margin-bottom: 12px
+	a
+		color: #06f
+		&:hover
+			color: #06f
+			text-decoration: underline
+
+.news
+	padding: 30px 0
+	.title
+		margin-bottom: 32px
+	.img-wrap
+		height: 350px
+		overflow: hidden
+		img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.sub-title
+		margin-top: 10px
+		display: inline-block
+		color: $color-title-2
+		text-transform: none
+	.news-content
+		margin-top: 10px
+		line-height: 1.5
+		max-height: 11rem
+		overflow: hidden
+		display: -webkit-box
+		text-overflow: ellipsis
+		-webkit-line-clamp: 7
+		-webkit-box-orient: vertical
+	.main-news
+		margin-bottom: 30px
+	.tabs-pagination
+		justify-content: center
+	.sub-news
+		margin-bottom: 30px
+		.img-wrap
+			height: 150px
+		.sub-title
+			font-size: 16px
+			overflow: hidden
+			display: -webkit-box
+			text-overflow: ellipsis
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+		.news-content
+			font-size: 14px
+			-webkit-line-clamp: 3
+@media (width: 768px)
+	.news
+		padding: 0
+		.img-wrap
+			height: 200px
+		.navbar-center
+			margin: 10px 0 15px
+		.main-news
+			.news-content
+				-webkit-line-clamp: 10
+				max-height: 14rem
+		.sub-news
+			.img-wrap
+				height: 100px
+@media (max-width: 767.97px)
+	.news
+		padding: 0
+		.navbar-center
+			margin: 10px 0
+		.img-wrap
+			height: 200px
+		.news-content
+			margin-top: 5px
+		.sub-news
+			.img-wrap
+				height: 200px
+.page-hinh-anh
+	.item
+		position: relative
+		margin-right: 45px
+		margin-bottom: 45px
+// Page chi tiết tin tức
+.page-ct-tintuc
+	margin-top: 32px
+	.line
+		margin: 24px 0
+		// margin-bottom: 16px
+	.content
+		line-height: 1.5
+		margin-bottom: 42px
