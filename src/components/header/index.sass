@@ -5,11 +5,15 @@ header
 	left: 0
 	width: 100%
 	color: #fff
-	&.on-scroll
+	&.on-scroll,
+	&.static
 		transition: all .3s ease-in-out
 		color: $color-title-3
+		// color: #06f
 		background: #fff
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3)
+	&.static
+		transition: none
 .header-nav
 	text-transform: uppercase
 	line-height: 1.5

@@ -1,4 +1,10 @@
+if (window.location.pathname !== '/') {
+	$('header').addClass('static');
+	$('main').css('padding-top', $('header').outerHeight());
+}
+
 $(document).ready(function () {
+
 	// back-2-top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
@@ -33,10 +39,10 @@ $(document).ready(function () {
 	// Slider
 	let headerBanner = new Swiper('.header-banner .swiper-container', {
 		loop: true,
-		speed: 1500,
+		speed: 2000,
 		lazy: true,
 		autoplay: {
-			delay: 2500,
+			delay: 5000,
 			disableOnInteraction: false,
 		},
 		pagination: {
