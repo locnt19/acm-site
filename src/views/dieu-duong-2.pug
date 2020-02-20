@@ -1,0 +1,63 @@
+extends _layout.pug
+
+block var
+	- var title = 'Điều dưỡng 2'
+//- block link
+	//- link(href="https://fonts.googleapis.com/css?family=Lemonada:700|Quicksand:400&display=swap" rel="stylesheet")
+
+block main
+	section.page-banner
+		img(src="./img/banner.jpg", alt="banner.jpg")
+	section.container
+		include ../components/breadcrumb/index
+	section.tin-tuc.tintuc-page.dieuduong-page
+		.container
+			.row
+				.col-12
+					h2.title Tin điều dưỡng
+			.row.dieuduong-tinchinh
+				.col-md-3
+					article.tintuc-item
+						a(href="#")
+							.box-img
+								img(src='img/news-3.png', alt='news-3.png')
+							h4.article-title "Thực tập sinh kỹ năng" và "Kỹ năng đặc định"
+							p.posted 18/10/2019
+							.item-content
+								p Thời gian gần đây, thị trường xuất khẩu lao động Nhật Bản trở nên sôi động hơn hẳn do Chính phủ Nhật đã thông qua Luật mới Chương trình làm việc liên tục 5 năm với tên gọi “Kỹ năng đặc định”.
+				.col-md-6.akhj
+					.swiper-container
+						.swiper-wrapper
+							-for(var i = 0; i < 3; i++)
+								a(href="#").swiper-slide
+									article.dieuduong-main.tintuc-item
+										.box-img
+											img(src='img/news-3.png', alt='news-3.png')
+										h4.article-title "Thực tập sinh kỹ năng" và "Kỹ năng đặc định"
+										p.posted 18/10/2019
+										.item-content
+											p Thời gian gần đây, thị trường xuất khẩu lao động Nhật Bản trở nên sôi động hơn hẳn do Chính phủ Nhật đã thông qua Luật mới Chương trình làm việc liên tục 5 năm với tên gọi “Kỹ năng đặc định”.
+											p Thời gian gần đây, thị trường xuất khẩu lao động Nhật Bản trở nên sôi động hơn hẳn do Chính phủ Nhật đã thông qua Luật mới Chương trình làm việc liên tục 5 năm với tên gọi “Kỹ năng đặc định”.
+					.pagination
+				.col-md-3
+					article.tintuc-item
+						a(href="#")
+							.box-img
+								img(src='img/news-3.png', alt='news-3.png')
+							h4.article-title "Thực tập sinh kỹ năng" và "Kỹ năng đặc định"
+							p.posted 18/10/2019
+							.item-content
+								p Thời gian gần đây, thị trường xuất khẩu lao động Nhật Bản trở nên sôi động hơn hẳn do Chính phủ Nhật đã thông qua Luật mới Chương trình làm việc liên tục 5 năm với tên gọi “Kỹ năng đặc định”div
+			.row
+				.col-12
+					h2.title Tin điều dưỡng khác
+				-for(var i = 0; i < 12; i++)
+					.col-md-4.col-lg-3
+						article.tintuc-item
+							a(href="#")
+								.box-img
+									img(src='img/news-3.png', alt='news-3.png')
+								h4.article-title "Thực tập sinh kỹ năng" và "Kỹ năng đặc định"
+								p.posted 18/10/2019
+								.item-content
+									p Thời gian gần đây, thị trường xuất khẩu lao động Nhật Bản trở nên sôi động hơn hẳn do Chính phủ Nhật đã thông qua Luật mới Chương trình làm việc liên tục 5 năm với tên gọi “Kỹ năng đặc định”div

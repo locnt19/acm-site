@@ -109,6 +109,18 @@ $(document).ready(function () {
 			clickable: true,
 		},
 	});
+
+	var dieuDuongPage = new Swiper('.dieuduong-page .swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1900,
+		pagination: {
+			el: '.dieuduong-page .pagination',
+			clickable: true,
+		},
+	});
+	
 	var lienKetIndex = new Swiper('.lien-ket .swiper-container', {
 		slidesPerView: 5,
 		spaceBetween: 30,
