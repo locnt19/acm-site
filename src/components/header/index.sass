@@ -18,8 +18,9 @@ header
 	text-transform: uppercase
 	line-height: 1.5
 	margin-left: auto
+	display: flex
+	align-items: center
 	li
-		display: inline-block
 		margin-left: 20px
 	a
 		&.active
@@ -86,6 +87,9 @@ header
 		li
 			display: block
 			padding: 15px 0
+			&:first-of-type
+				a:first-of-type
+					margin-right: 15px
 			&:not(:last-child)
 				border-bottom: 1px solid rgba(#fff, .5)
 		a
